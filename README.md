@@ -4,6 +4,18 @@ This is by [this video](https://www.youtube.com/watch?v=JOTH1eDP99Y).
 
 It is a "starter" for the tutorial mod.
 
+
+## Potential Pitfalls
+
+1. Set your `JAVA_HOME` environment variable correctly to the proper JDK. (NOT JRE). It has to be version 8, though either Oracle 8 or OpenJDK 8 both seem to work.  Java 8 it s quite old but this is what minecraft wants. For windows, this might 
+be `C:\Program Files\ Java\jdk1.8.xxxxx`  (fill in the blanks) For Linux, try `/usr/lib/jvm/java-8-openjdk-amd64/` 
+
+2. You MUST run the included `gradlew` because other versions (installations of `gradlew`) **DO NOT WORK**.   IntelliJ may try to use its own gradle builder which may be the source of the problem.
+
+3. You MUST run `gradlew genIntellijRuns` from the command line. Probably best to run it first thing before you even open it up in intelliJ.
+
+4. You should also run `gradlew --refresh-dependencies` .  Poblems like missing Apache Logger should probably be solvable by running this command.
+
 ## Source installation information for modders
 
 This code follows the Minecraft Forge installation methodology. It will apply
